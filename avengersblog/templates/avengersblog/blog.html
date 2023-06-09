@@ -1,0 +1,35 @@
+{%extends 'avengersblog/base.html' %}
+{%load static%}
+
+
+{%block content%}
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light"><strong>AVENGERS</strong></h1>
+        <p class="text-muted">El Universo cinematográfico de Marvel es una franquicia de medios y un universo compartido, centrada en una serie de películas de superhéroes producidas por Marvel Studios. Las películas están basadas en personajes que aparecen en los cómics estadounidenses publicados por Marvel Comics.</p>
+        </div>
+      </div>
+    </div>
+   
+  {%for post in posts%}
+
+
+          <div class="card shadow-sm">
+            <img src = "{{post.image.url}}" ><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"><strong>{{post.title}}</strong></text></svg>
+            <div class="card-body">
+              <p class="card-text">{{post.text}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Mas..</button>
+                  
+                </div>
+                <small class="text-body-secondary">{{post.time}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+
+  {%endfor%}
+{%endblock%}

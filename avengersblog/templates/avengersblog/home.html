@@ -1,0 +1,21 @@
+{%extends 'avengersblog/base.html' %}
+{%load static%}
+
+{%block content%}
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light"><strong>AVENGERS</strong></h1>
+        <p class="lead text-body-secondary">El orden cronológico de las películas y series del universo cinematográfico de MARVEL.</p>
+        <p>
+          <a href="{% url 'blog' %}" class="btn btn-primary my-2">Ingresar</a>
+          
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{%endblock%}
