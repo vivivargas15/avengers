@@ -7,29 +7,32 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light"><strong>AVENGERS</strong></h1>
-        <p class="text-muted">El Universo cinematográfico de Marvel es una franquicia de medios y un universo compartido, centrada en una serie de películas de superhéroes producidas por Marvel Studios. Las películas están basadas en personajes que aparecen en los cómics estadounidenses publicados por Marvel Comics.</p>
+        <p class="text-muted"><strong>El Universo cinematográfico de Marvel es una franquicia de medios y un universo compartido, centrada en una serie de películas de superhéroes producidas por Marvel Studios. Las películas están basadas en personajes que aparecen en los cómics estadounidenses publicados por Marvel Comics.</strong></p>
         </div>
       </div>
     </div>
-   
+  
+      <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
   {%for post in posts%}
 
-
-          <div class="card shadow-sm">
+        <div class="col">
+          <div class="card shadow-sm" >
             <img src = "{{post.image.url}}" ><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"><strong>{{post.title}}</strong></text></svg>
             <div class="card-body">
               <p class="card-text">{{post.text}}</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Mas..</button>
-                  
-                </div>
+                 <a href="{% url 'blog_detail' pk=post.pk %}" class="btn btn-primary my-2">Mas...</a>
+
                 <small class="text-body-secondary">{{post.time}}</small>
               </div>
             </div>
           </div>
         </div>
- 
 
   {%endfor%}
+
+    </div>
+    </div>
+      
 {%endblock%}
